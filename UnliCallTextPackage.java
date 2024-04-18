@@ -16,13 +16,17 @@ public class UnliCallTextPackage implements UnliCallsTextOffer
     {
         String offersUnli;
 
-        if (unliCallText)
+        if (telcoName == "Smart")
         {
-            offersUnli = "offers Unli Calls and Text";
+            offersUnli = "Does not offer any free calls or texts, and you will be charged per use.";
+        }
+        else if (telcoName == "Globe")
+        {
+            offersUnli = "Comes with unlimited calls and texts to subscribers within their network. Calls and texts to other networks are charged extra.";
         }
         else
         {
-            offersUnli = "does not offer Unli Calls and Text";
+            offersUnli = "Includes unlimited calls and texts to all networks within the country.";
         }
         return offersUnli;
     }
